@@ -59,7 +59,7 @@ const CityLists = () => {
     }, []);
 console.log(states.stateName)
     useEffect(() => {
-        // Fetch city data when selectedState changes
+        
         if (selectedState) {
             console.log(selectedState)
             fetch(`http://api.minebrat.com/api/v1/states/cities/${selectedState}`) // Replace with your API endpoint
@@ -86,7 +86,7 @@ console.log(states.stateName)
         const state = e.target.value;
         setselectedCityName(state);
     }   
-    console.log(cities)
+    console.log(cities[0].cityName)
     const handleClick = (e) => {
         // if (selectedState || selectedCityName) {
         //     // setSelectedState(selectedState.stateName);
